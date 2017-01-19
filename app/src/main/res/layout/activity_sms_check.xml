@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 公共头部 -->
+
+    <include layout="@layout/public_top_title" />
+    <!-- 内容体 -->
+
+    <LinearLayout
+        android:id="@+id/ll_content_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_padding_height_30" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/mobile_office_system"
+            android:textColor="@color/main_tv_font"
+            android:textSize="@dimen/text_size_24" />
+
+        <EditText
+            android:id="@+id/et_login_username"
+            style="@style/edittext_input_text"
+            android:layout_marginTop="@dimen/margin_padding_height_30"
+            android:hint="@string/account_number"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/commit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_padding_height_40"
+            android:layout_marginTop="@dimen/margin_padding_height_20"
+            android:background="@color/btn_background"
+            android:text="@string/global_login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+     android:background="@color/main_background_color"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/public_title" />
+
+    <RelativeLayout
+        android:id="@+id/message_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/title_layout" >
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="24dp" />
+        
+        <TextView 
+            android:id="@+id/tv_year"
+            android:layout_toRightOf="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:gravity="top"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp" 
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/message_title"
+        android:layout_width="fill_parent"
+        android:background="@color/white"
+        android:layout_height="40dp"
+        android:layout_below="@+id/message_layout"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sunday"
+            android:textColor="@color/lightgray5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/monday" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tuesday" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/wednesday" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/thursday" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/friday" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/saturday"
+            android:textColor="@color/lightgray5" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/calendar_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/message_title" />
+
+    <ListView
+        android:id="@+id/lv_work_calendar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fafafa"
+        android:layout_above="@+id/ll_tips"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/calendar_main" />
+
+    <LinearLayout
+        android:id="@+id/ll_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#fafafa"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip">
+
+        <Button
+            android:id="@+id/btn_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/button_bg"
+            android:textSize="17dp" 
+            android:textColor="@color/bar_home_bg"
+            android:text="@string/today" >
+        </Button>
+
+        <Button
+            android:id="@+id/btn_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/schedule"
+            android:textColor="@color/bar_home_bg"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+</RelativeLayout>

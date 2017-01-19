@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/public_top_RelativeLayout" >
+    
+    <Button
+        android:id="@+id/btn_setting"
+        android:layout_width="@dimen/margin_padding_height_30"
+        android:layout_height="@dimen/margin_padding_height_30"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_back"
+        android:onClick="toggleMenu" />
+    
+    <TextView 
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hello_world"
+        android:textColor="@color/white"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:id="@+id/tv_sech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_padding_height_15"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_16" />
+
+</RelativeLayout>

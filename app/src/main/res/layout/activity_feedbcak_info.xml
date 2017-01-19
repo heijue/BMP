@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/public_title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_marginBottom="10dp"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" 
+            >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/main_body_bg"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="80dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/staff_info"
+                layout="@layout/public_feedback_staff_info" />
+
+            <include
+                android:id="@+id/content_info"
+                layout="@layout/public_feedback_content_info" />
+
+            <include
+                android:id="@+id/troub_info"
+                layout="@layout/public_feedback_troub_info" />
+
+            <include
+                android:id="@+id/evaluation_info"
+                layout="@layout/public_feedback_evaluation_info" />
+            
+             <include
+                android:id="@+id/evaluation"
+                layout="@layout/public_feedback_evaluation" />
+
+            <LinearLayout
+                android:id="@+id/ll_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_commit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_selector"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/margin_padding_height_5"
+                    android:paddingLeft="@dimen/margin_padding_height_10"
+                    android:paddingRight="@dimen/margin_padding_height_10"
+                    android:paddingTop="@dimen/margin_padding_height_5"
+                    android:text="@string/submit_evaluation"
+                    android:textColor="@color/main_title_background_color" />
+
+                <TextView
+                    android:id="@+id/tv_close"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_selector"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/margin_padding_height_5"
+                    android:paddingLeft="@dimen/margin_padding_height_10"
+                    android:paddingRight="@dimen/margin_padding_height_10"
+                    android:paddingTop="@dimen/margin_padding_height_5"
+                    android:textColor="@color/bar_home_bg" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

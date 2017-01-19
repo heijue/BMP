@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_height_50"
+        android:background="@drawable/textview_selector"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_padding_height_10"
+        android:singleLine="true"
+        android:textColor="@color/bar_home_bg"
+        android:textSize="17dp" />
+
+    <LinearLayout
+        android:id="@+id/show_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_coll" >
+
+                <TextView
+                    android:id="@+id/start"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/start"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/time_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/start"
+                    android:layout_marginLeft="@dimen/margin_padding_height_10"
+                    android:layout_toRightOf="@id/start" />
+
+                <TextView
+                    android:id="@+id/be_accepted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/start"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="@dimen/margin_padding_height_5"
+                    android:paddingLeft="@dimen/margin_padding_height_10"
+                    android:paddingRight="@dimen/margin_padding_height_10"
+                    android:paddingTop="@dimen/margin_padding_height_5"
+                    android:text="@string/to_be_accepted"
+                    android:textColor="#a0a0a0" />
+
+                <TextView
+                    android:id="@+id/accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBaseline="@id/start"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_selector"
+                    android:paddingBottom="@dimen/margin_padding_height_5"
+                    android:paddingLeft="@dimen/margin_padding_height_20"
+                    android:paddingRight="@dimen/margin_padding_height_20"
+                    android:paddingTop="@dimen/margin_padding_height_5"
+                    android:text="@string/accept"
+                    android:textColor="#a0a0a0"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/end"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_below="@id/start"
+                    android:layout_marginTop="@dimen/margin_padding_height_10"
+                    android:background="@drawable/end"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/time_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/end"
+                    android:layout_marginLeft="@dimen/margin_padding_height_10"
+                    android:layout_toRightOf="@id/end" />
+
+                <TextView
+                    android:id="@+id/complete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBaseline="@id/end"
+                    android:layout_marginRight="@dimen/margin_padding_height_5"
+                    android:layout_toLeftOf="@+id/termination"
+                    android:background="@drawable/button_selector"
+                    android:paddingBottom="@dimen/margin_padding_height_5"
+                    android:paddingLeft="@dimen/margin_padding_height_20"
+                    android:paddingRight="@dimen/margin_padding_height_20"
+                    android:paddingTop="@dimen/margin_padding_height_5"
+                    android:text="@string/complete"
+                    android:textColor="#a0a0a0"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/termination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBaseline="@id/end"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_selector"
+                    android:paddingBottom="@dimen/margin_padding_height_5"
+                    android:paddingLeft="@dimen/margin_padding_height_20"
+                    android:paddingRight="@dimen/margin_padding_height_20"
+                    android:paddingTop="@dimen/margin_padding_height_5"
+                    android:text="@string/termination"
+                    android:textColor="#a0a0a0" />
+
+                <TextView
+                    android:id="@+id/terminated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/end"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_padding_height_5"
+                    android:paddingBottom="@dimen/margin_padding_height_5"
+                    android:paddingLeft="@dimen/margin_padding_height_10"
+                    android:paddingRight="@dimen/margin_padding_height_10"
+                    android:paddingTop="@dimen/margin_padding_height_5"
+                    android:text="@string/have_been_termination"
+                    android:textColor="#a0a0a0"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_coll"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/collapse" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_task_info"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/end"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_bg_login_selector"
+            android:text="@string/task_info"
+            android:textColor="@color/main_title_background_color" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/lightgray5" />
+
+</LinearLayout>

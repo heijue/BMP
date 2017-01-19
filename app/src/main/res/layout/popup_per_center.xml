@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/margin_padding_height_20"
+    android:paddingRight="@dimen/margin_padding_height_20"
+    android:gravity="center_horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_selector"
+            android:text="@string/global_take_photo"
+            android:textSize="@dimen/text_size_16" />
+
+        <Button
+            android:id="@+id/btn_pick_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_height_5"
+            android:background="@drawable/btn_bg_selector"
+            android:text="@string/global_pick_from_gallery"
+            android:textSize="@dimen/text_size_16" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_padding_height_16"
+            android:layout_marginTop="@dimen/margin_padding_height_5"
+            android:background="@drawable/btn_bg_selector"
+            android:text="@string/global_cancel"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+</RelativeLayout>

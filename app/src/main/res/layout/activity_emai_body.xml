@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_padding_height_40"
+        android:background="#eeeeee"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/main_body_bg"
+            android:gravity="center"
+            android:text="@string/email"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <include layout="@layout/quote_email" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_padding_height_40"
+        android:background="#eeeeee"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/main_body_bg"
+            android:gravity="center"
+            android:text="@string/folders"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_show"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@color/white"
+        android:divider="@color/main_body_bg"
+        android:dividerHeight="0.5dp" />
+
+</LinearLayout>

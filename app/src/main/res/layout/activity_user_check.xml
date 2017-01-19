@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_padding_height_30" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/binding_job_number"
+            android:textColor="@color/main_tv_font"
+            android:textSize="@dimen/text_size_16" />
+        
+        <EditText
+            android:id="@+id/et_employee_no"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_padding_height_40"
+            android:layout_marginTop="@dimen/margin_padding_height_40"
+            android:background="@drawable/input"
+            android:singleLine="true"
+            android:padding="@dimen/margin_padding_height_5"
+            android:hint="@string/job_number" />
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_padding_height_40"
+            android:layout_marginTop="@dimen/margin_padding_height_20"
+            android:background="@drawable/btn_bg_login_selector"
+            android:text="@string/global_ok"
+            android:textColor="@color/main_title_background_color"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+
+</LinearLayout>

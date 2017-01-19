@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_approvals"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_approval"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_padding_height_32"
+        android:orientation="horizontal" 
+        android:baselineAligned="@color/white"
+        android:visibility="gone"
+        >
+
+        <LinearLayout style="@style/rg_base" >
+            <TextView
+                android:id="@+id/tv_not_approval"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/not_approval"
+                android:textColor="@color/home_menu_selector"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/rg_base" >
+
+            <TextView
+                android:id="@+id/tv_pproved"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/approved"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

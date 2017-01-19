@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="44dp"
+    android:background="@color/lightgray6" >
+
+    <TextView
+        android:id="@+id/tv_top_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"  
+        android:layout_toRightOf="@+id/top_go_back"
+        android:gravity="center"
+        android:textColor="@color/main_tv_font"
+        android:textSize="17dp"
+        android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/top_go_back"
+        android:layout_width="@dimen/margin_padding_height_30"
+        android:layout_height="@dimen/margin_padding_height_30"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_back" />
+
+    <TextView
+        android:id="@+id/tv_sech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_padding_height_10"
+        android:text="@string/search"
+        android:textSize="@dimen/text_size_16" />
+
+</RelativeLayout>

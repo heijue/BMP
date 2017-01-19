@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_background_color" >
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/public_title" />
+
+    <ProgressBar
+        android:id="@+id/pb_progres"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/top" />
+
+    <WebView
+        android:id="@+id/wv_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_commit"
+        android:layout_below="@+id/pb_progres" />
+
+    <LinearLayout
+        android:id="@+id/ll_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_padding_height_10"
+        android:layout_marginLeft="@dimen/margin_padding_height_30"
+        android:layout_marginRight="@dimen/margin_padding_height_30"
+        android:layout_marginTop="@dimen/margin_padding_height_10"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btn_agree"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_padding_height_30"
+            android:layout_weight="1"
+            android:background="@drawable/btn_agree_or"
+            android:text="@string/submittal"
+            android:textColor="@color/main_title_background_color"
+            android:textSize="@dimen/text_size_16" />
+
+        <Button
+            android:id="@+id/btn_disagree"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_padding_height_30"
+            android:layout_marginLeft="@dimen/margin_padding_height_30"
+            android:layout_weight="1"
+            android:background="@drawable/btn_agree_or"
+            android:text="@string/global_delete"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/network_error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络连接中断，请检查您的网络设置"
+            android:textColor="@color/bar_home_bg" />
+    </LinearLayout>
+
+</RelativeLayout>

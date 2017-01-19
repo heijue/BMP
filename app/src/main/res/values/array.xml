@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="locale_display">
+        <item>English</item>
+        <item>中文</item>
+        <item>日本語</item>
+    </string-array>
+
+</resources>

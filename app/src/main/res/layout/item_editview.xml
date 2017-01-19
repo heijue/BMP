@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <AutoCompleteTextView
+        android:id="@+id/actv_show"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@null"
+        android:layout_marginBottom="3dp"
+        android:hint="@string/email_address"
+        android:singleLine="true" 
+        android:textColor="@color/main_tv_font"
+        android:dropDownWidth="500px" 
+        android:textSize="14dp" />
+
+</LinearLayout>

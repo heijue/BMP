@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/main_background_color"
+    >
+    
+    <include android:id="@+id/top" layout="@layout/public_menu_title"/>
+
+    <GridView
+        android:id="@+id/gv_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/tv_down"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/margin_padding_height_10"
+        android:numColumns="3"
+        android:padding="@dimen/margin_padding_height_10"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/margin_padding_height_10" />
+
+    <TextView
+        android:id="@+id/tv_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/margin_padding_height_10"
+        android:text="@string/system_operation_download"
+        android:textSize="@dimen/text_size_16" />
+
+</RelativeLayout>

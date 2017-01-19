@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/public_top_RelativeLayout"
+    android:background="@color/main_title_background_color" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/public_top_text"
+        />
+    
+    <ImageView
+        android:id="@+id/iv_per_center"
+        android:layout_width="@dimen/margin_padding_height_30"
+        android:layout_height="@dimen/margin_padding_height_30"
+        android:layout_marginLeft="@dimen/margin_padding_height_10"
+        android:layout_centerVertical="true"
+        android:background="@drawable/personal_center_selector" />
+
+</RelativeLayout>

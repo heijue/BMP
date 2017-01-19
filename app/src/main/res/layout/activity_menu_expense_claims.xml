@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/public_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp" >
+
+        <TextView
+            android:id="@+id/iv_name"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/name"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/iv_name"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/iv_name"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignBaseline="@+id/iv_name"
+            android:layout_toLeftOf="@+id/tv_userid"
+            android:background="@drawable/job_no"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_userid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/iv_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/lightgray5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp" >
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/submission_time" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:text="@string/amount_reimbursement" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/state" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgray5" />
+
+    <com.k2.mobile.app.view.widget.XListView
+        android:id="@+id/lv_show_consumption"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightgray2"
+        android:divider="@null" />
+
+</LinearLayout>

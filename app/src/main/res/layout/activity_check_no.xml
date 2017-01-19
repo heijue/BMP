@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_padding_height_30" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_height_30"
+            android:text="@string/enter_verification_code"
+            android:textColor="@color/main_tv_font"
+            android:textSize="@dimen/text_size_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_padding_height_40"
+            android:layout_marginTop="@dimen/margin_padding_height_40"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_vf_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/input"
+                android:hint="@string/verification_code"
+                android:maxLength="10"
+                android:padding="@dimen/margin_padding_height_5"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tv_time_down"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_padding_height_20"
+                android:layout_weight="1"
+                android:background="@drawable/login_bg"
+                android:gravity="center"
+                android:maxLength="10"
+                android:padding="@dimen/margin_padding_height_5"
+                android:singleLine="true"
+                android:text="@string/resend"
+                android:textColor="@color/main_title_background_color" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_padding_height_40"
+            android:layout_marginTop="@dimen/margin_padding_height_20"
+            android:background="@drawable/btn_bg_login_selector"
+            android:text="@string/global_ok"
+            android:textColor="@color/main_title_background_color"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+
+</LinearLayout>

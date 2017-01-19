@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/main_background_color"
+    >
+
+    <FrameLayout
+        android:id="@+id/fr_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_color"
+        android:layout_above="@+id/main_bottom" />
+
+    <include
+        android:id="@+id/main_bottom"
+        layout="@layout/layout_main_bottom" />
+
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_slide_menu_background"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_padding_height_20" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/iv_head_por"
+                android:layout_width="@dimen/margin_padding_height_50"
+                android:layout_height="@dimen/margin_padding_height_50"
+                android:layout_marginRight="@dimen/margin_padding_height_10"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                style="@style/slide_menu_text_none_margin"
+                android:layout_alignTop="@id/iv_head_por"
+                android:layout_toRightOf="@id/iv_head_por"
+                />
+
+            <TextView
+                android:id="@+id/tv_login_out"
+                style="@style/slide_menu_text_none_margin"
+                android:layout_alignBottom="@id/iv_head_por"
+                android:layout_toRightOf="@id/iv_head_por"
+                android:text="@string/user_login_out"
+                android:textSize="@dimen/text_size_14" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/my_workbench"
+            style="@style/slide_menu_text_none_margin"
+            android:layout_height="@dimen/margin_padding_height_40"
+            android:layout_marginTop="@dimen/margin_padding_height_10"
+            android:drawablePadding="@dimen/margin_padding_height_10"
+            android:drawableRight="@drawable/my_workbench_more_selector"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:visibility="gone" 
+            android:text="@string/my_workbench" />
+
+        <View style="@style/slide_menu_line" />
+
+        <LinearLayout
+            android:id="@+id/my_workbench_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/my_tasks"
+                style="@style/slide_menu_text"
+                android:text="@string/my_tasks" />
+
+            <View style="@style/slide_menu_line" />
+
+            <TextView
+                android:id="@+id/my_process"
+                style="@style/slide_menu_text"
+                android:text="@string/my_process" />
+
+            <View style="@style/slide_menu_line" />
+
+            <TextView
+                android:id="@+id/my_calendar"
+                style="@style/slide_menu_text"
+                android:text="@string/my_calendar" />
+
+            <View style="@style/slide_menu_line" />
+
+            <TextView
+                android:id="@+id/my_mails"
+                style="@style/slide_menu_text"
+                android:text="@string/my_mails" />
+
+            <View style="@style/slide_menu_line" />
+
+            <TextView
+                android:id="@+id/my_address_book"
+                style="@style/slide_menu_text"
+                android:text="@string/my_address_book" />
+
+            <View style="@style/slide_menu_line" />
+
+            <TextView
+                android:id="@+id/tv_my_er"
+                style="@style/slide_menu_text"
+                android:text="@string/my_reimbursement" />
+
+            <View style="@style/slide_menu_line" />
+
+            <TextView
+                android:id="@+id/person_consume_query"
+                style="@style/slide_menu_text"
+                android:text="@string/person_consume_query" />
+
+            <View style="@style/slide_menu_line" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_company_news"
+            style="@style/slide_menu_text"
+            android:text="@string/company_news" 
+            android:visibility="gone"
+            />
+
+        <View style="@style/slide_menu_line" />
+
+        <TextView
+            android:id="@+id/tv_portal"
+            style="@style/slide_menu_text"
+            android:text="@string/process_portal" 
+            android:visibility="gone"
+            />
+
+        <View style="@style/slide_menu_line" />
+
+        <TextView
+            android:id="@+id/tv_collect"
+            style="@style/slide_menu_text"
+            android:text="@string/applications_collect" 
+            android:visibility="gone"
+            />
+
+        <View style="@style/slide_menu_line" />
+
+        <TextView
+            android:id="@+id/tv_oia_forum"
+            style="@style/slide_menu_text"
+            android:text="@string/oia_forum" 
+            android:visibility="gone"
+            />
+
+        <View style="@style/slide_menu_line" />
+
+        <TextView
+            android:id="@+id/tv_help"
+            style="@style/slide_menu_text"
+            android:text="@string/help" 
+            android:visibility="gone"
+            />
+
+        <View style="@style/slide_menu_line" />
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            style="@style/slide_menu_text"
+            android:text="@string/suggestion_feedback" 
+            android:visibility="gone"
+            />
+
+        <View style="@style/slide_menu_line" />
+    </LinearLayout>
+
+</ScrollView>

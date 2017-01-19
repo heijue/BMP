@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    android:orientation="vertical" >
+    
+     <include layout="@layout/public_title" />
+    
+    <include layout="@layout/news_ad"/>
+    
+    <com.k2.mobile.app.view.widget.XListView
+        android:id="@+id/lv_news_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightgray2"
+        android:divider="@null" />
+
+</LinearLayout>

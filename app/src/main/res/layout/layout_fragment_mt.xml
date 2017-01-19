@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_mt_frag"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_padding_height_32"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout style="@style/rg_base" >
+
+            <TextView
+                android:id="@+id/tv_be_accept"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/to_be_accepted"
+                android:textColor="@color/home_menu_selector"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/rg_base" >
+
+            <TextView
+                android:id="@+id/tv_unfinished"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/in_progress"
+                android:textColor="@color/home_menu_selector"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/rg_base" >
+
+            <TextView
+                android:id="@+id/tv_completed"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/completed"
+                android:textColor="@color/home_menu_selector"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgray5" />
+
+</LinearLayout>

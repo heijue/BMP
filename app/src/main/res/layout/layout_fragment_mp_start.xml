@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/ll_start"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_padding_height_32"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout style="@style/rg_base" >
+
+            <TextView
+                android:id="@+id/tv_fiction"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/fiction"
+                android:textColor="@color/home_menu_selector"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/rg_base" >
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/review"
+                android:textColor="@color/home_menu_selector"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

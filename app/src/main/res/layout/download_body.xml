@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_download_messge"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/app_update"
+            android:textColor="#4fa5d5"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#4fa5d5" />
+
+        <TextView
+            android:id="@+id/tv_download_body"
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/auto_update"
+            android:textColor="@color/bar_home_bg"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:layout_above="@+id/ll_bottom"
+        android:background="#99C9C9C9" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bn_refuse_download"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="@string/then_again"
+            android:textColor="@color/bar_home_bg"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="0.66dp"
+            android:layout_height="100dp"
+            android:background="#99C9C9C9" />
+
+        <Button
+            android:id="@+id/bn_download"
+           android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:textColor="@color/bar_home_bg"
+            android:text="@string/download"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="55dp"
+    android:layout_alignParentBottom="true"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:background="#99C9C9C9" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_application"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_img_application"
+                android:layout_width="37dp"
+                android:layout_height="25dp"
+                android:background="@drawable/btm_application" />
+
+            <TextView
+                android:id="@+id/tv_txt_application"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_workbench"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_approval"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_img_approval"
+                    android:layout_width="37dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/btm_approval" />
+
+                <TextView
+                    android:id="@+id/tv_txt_approval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/approval"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_approval_count"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="45dp"
+                android:background="@drawable/count"
+                android:gravity="center"
+                android:text="0"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="8dp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_img_my"
+                android:layout_width="37dp"
+                android:layout_height="25dp"
+                android:background="@drawable/btm_contacts" />
+
+            <TextView
+                android:id="@+id/tv_txt_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_my"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

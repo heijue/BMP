@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/et_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_height_40"
+        android:background="@drawable/input"
+        android:layout_marginLeft="@dimen/margin_padding_height_10"
+        android:layout_marginRight="@dimen/margin_padding_height_10"
+        android:layout_marginTop="@dimen/margin_padding_height_20"
+        android:layout_marginBottom="@dimen/margin_padding_height_20"
+        android:padding="5dp"
+        android:inputType="text"
+        android:textColor="@color/main_tv_font"
+        android:textSize="14sp"
+        android:singleLine="true" />
+
+</LinearLayout>
