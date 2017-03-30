@@ -1,11 +1,5 @@
 package com.k2.mobile.app.model.adapter;
 
-import java.util.HashMap;
-import java.util.List;
-
-import com.k2.mobile.app.R;
-import com.k2.mobile.app.model.bean.HomeMenuBean;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +8,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.CompoundButton.OnCheckedChangeListener;
+
+import com.k2.mobile.app.R;
+import com.k2.mobile.app.model.bean.HomeMenuBean;
+
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * @Title MyGridViewAddAdapter.java

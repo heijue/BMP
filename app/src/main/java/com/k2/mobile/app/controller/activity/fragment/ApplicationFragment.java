@@ -1,13 +1,5 @@
 package com.k2.mobile.app.controller.activity.fragment;
 
-import java.util.ArrayList;
-
-import com.k2.mobile.app.R;
-import com.k2.mobile.app.common.config.BroadcastNotice;
-import com.k2.mobile.app.controller.activity.menu.application.CommonFragment;
-import com.k2.mobile.app.controller.activity.menu.application.MoreFragment;
-import com.k2.mobile.app.controller.activity.menu.personalCenter.PersonalCenterActivity;
-import com.k2.mobile.app.model.adapter.MyFragmentPagerAdapter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -18,13 +10,22 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.k2.mobile.app.R;
+import com.k2.mobile.app.common.config.BroadcastNotice;
+import com.k2.mobile.app.controller.activity.menu.application.CommonFragment;
+import com.k2.mobile.app.controller.activity.menu.application.MoreFragment;
+import com.k2.mobile.app.controller.activity.menu.personalCenter.PersonalCenterActivity;
+import com.k2.mobile.app.model.adapter.MyFragmentPagerAdapter;
+
+import java.util.ArrayList;
 
 /**
  * @Title ApplicationFragment.java

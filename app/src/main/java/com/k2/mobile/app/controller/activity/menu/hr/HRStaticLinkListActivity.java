@@ -104,6 +104,7 @@ public class HRStaticLinkListActivity extends BaseActivity implements OnClickLis
         title = getIntent().getStringExtra("title");
         popularCode = getIntent().getStringExtra("popularCode");
         tv_title.setText(title);
+        System.out.println(urls);
         mXWalkView.load(urls, null);
         // 开启调试
         XWalkPreferences.setValue(XWalkPreferences.REMOTE_DEBUGGING, true);
@@ -126,10 +127,6 @@ public class HRStaticLinkListActivity extends BaseActivity implements OnClickLis
             mXWalkView.onShow();
         }
     }
-
-
-
-
 
     @Override
     protected void onNewIntent(Intent intent) {

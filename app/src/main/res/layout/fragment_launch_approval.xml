@@ -17,6 +17,13 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/lightgray5" />
+    <com.k2.mobile.app.view.widget.AddAndSubEditText
+        android:id="@+id/search"
+        android:hint="@string/search"
+        android:visibility="gone"
+        android:drawableRight="@drawable/ic_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
      <com.k2.mobile.app.view.widget.XListView
         android:id="@+id/lv_work_show"

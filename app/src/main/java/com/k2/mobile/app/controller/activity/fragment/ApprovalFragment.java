@@ -1,14 +1,5 @@
 package com.k2.mobile.app.controller.activity.fragment;
 
-import java.util.ArrayList;
-
-import com.k2.mobile.app.R;
-import com.k2.mobile.app.common.config.BroadcastNotice;
-import com.k2.mobile.app.controller.activity.menu.examine.ApprovedFragment;
-import com.k2.mobile.app.controller.activity.menu.examine.IinitiatedFragment;
-import com.k2.mobile.app.controller.activity.menu.personalCenter.PersonalCenterActivity;
-import com.k2.mobile.app.model.adapter.MyFragmentPagerAdapter;
-
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -20,13 +11,23 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
 import android.view.animation.TranslateAnimation;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.k2.mobile.app.R;
+import com.k2.mobile.app.common.config.BroadcastNotice;
+import com.k2.mobile.app.controller.activity.menu.examine.ApprovedFragment;
+import com.k2.mobile.app.controller.activity.menu.examine.IinitiatedFragment;
+import com.k2.mobile.app.controller.activity.menu.personalCenter.PersonalCenterActivity;
+import com.k2.mobile.app.model.adapter.MyFragmentPagerAdapter;
+
+import java.util.ArrayList;
 
 /**
  * @Title ApprovalFragment.java
@@ -38,7 +39,7 @@ import android.widget.TextView;
  * @date 2015-04-22 20:45:03
  * @version V1.0
  */
-public class ApprovalFragment extends Fragment implements OnClickListener {
+public class ApprovalFragment extends Fragment implements OnClickListener{
 	
 	private View view = null;
 	private TextView tv_title;
@@ -59,7 +60,8 @@ public class ApprovalFragment extends Fragment implements OnClickListener {
 	private IncomingReceiver iReceiver = null;
 	
 	private boolean flag = true;
-		
+	private EditText mEd_search;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.fragment_approval, null);
@@ -76,6 +78,7 @@ public class ApprovalFragment extends Fragment implements OnClickListener {
 	 * 返回值: void
 	 */
 	private void initView() {
+		mEd_search = (EditText) view.findViewById(R.id.search);
 		tv_title = (TextView) view.findViewById(R.id.tv_title);
 		iv_per_center = (ImageView) view.findViewById(R.id.iv_per_center);
 		tv_launch = (TextView) view.findViewById(R.id.tv_launch);
@@ -83,9 +86,7 @@ public class ApprovalFragment extends Fragment implements OnClickListener {
 		tv_title.setText(R.string.my_approval_process);
 		selectedColor = getResources().getColor(R.color.main_title_background_color);
 		unSelectedColor = getResources().getColor(R.color.main_tv_font);
-		
 		iv_per_center.setVisibility(View.GONE);
-		
 		initImageView(view);
 		initTextView(view);
 		initViewPager(view);
@@ -139,7 +140,6 @@ public class ApprovalFragment extends Fragment implements OnClickListener {
 	/**
 	 * @Title: createFilter
 	 * @Description: 创建IntentFilter
-	 * @param void
 	 * @return void 
 	 * @throws
 	 */
@@ -153,7 +153,8 @@ public class ApprovalFragment extends Fragment implements OnClickListener {
 		// 注册广播
 		getActivity().registerReceiver(iReceiver, filter);
 	}
-	
+
+
 	/**
 	 * 接收广播
 	 */ 
@@ -290,4 +291,5 @@ public class ApprovalFragment extends Fragment implements OnClickListener {
 		}
 		super.onDestroy();
 	}
+
 }

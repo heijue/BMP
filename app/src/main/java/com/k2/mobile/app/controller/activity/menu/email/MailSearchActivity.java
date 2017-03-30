@@ -1,9 +1,4 @@
-package com.k2.mobile.app.controller.activity.menu.email;    
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.io.Serializable;
+package com.k2.mobile.app.controller.activity.menu.email;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -24,9 +19,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
 
 import com.alibaba.fastjson.JSON;
 import com.k2.mobile.app.R;
@@ -54,7 +49,12 @@ import com.k2.mobile.app.utils.NetWorkUtil;
 import com.k2.mobile.app.view.widget.ClearEditText;
 import com.k2.mobile.app.view.widget.XListView;
 import com.k2.mobile.app.view.widget.XListView.IXListViewListener;
-  
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
 * @Title MailSearchActivity.java
 * @Package com.oppo.mo.controller.activity.menu.workbench;
@@ -426,7 +426,6 @@ public class MailSearchActivity extends BaseActivity implements OnClickListener 
 	/**
 	 * @Title: createFilter
 	 * @Description: 创建IntentFilter
-	 * @param void
 	 * @return void 
 	 * @throws
 	 */

@@ -18,11 +18,6 @@ public class AddAndSubEditText extends EditText {
     final int DRAWABLE_RIGHT = 2;
     final int DRAWABLE_BOTTOM = 3;
 
-    @SuppressLint("NewApi")
-    public AddAndSubEditText(Context context, AttributeSet attrs, int defStyleAttr,
-                             int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
 
     public AddAndSubEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);

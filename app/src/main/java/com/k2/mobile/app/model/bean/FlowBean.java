@@ -1,7 +1,5 @@
 package com.k2.mobile.app.model.bean;    
 
-import com.k2.mobile.app.controller.core.BaseApp;
-
 import java.io.Serializable;
 
 /**
@@ -38,6 +36,27 @@ public class FlowBean implements Serializable{
 	public void setSN(String sN) {
 		SN = sN;
 	}
+
+	@Override
+	public String toString() {
+		return "FlowBean{" +
+				"SN='" + SN + '\'' +
+				", destination='" + destination + '\'' +
+				", activityName='" + activityName + '\'' +
+				", assignedDate='" + assignedDate + '\'' +
+				", displayName='" + displayName + '\'' +
+				", folio='" + folio + '\'' +
+				", procDispName='" + procDispName + '\'' +
+				", ProcInstID='" + ProcInstID + '\'' +
+				", startDate='" + startDate + '\'' +
+				", classType=" + classType +
+				", opentype='" + opentype + '\'' +
+				", linkUrl='" + linkUrl + '\'' +
+				", processFullName='" + processFullName + '\'' +
+				", bsCode='" + bsCode + '\'' +
+				'}';
+	}
+
 	public int getClassType() {
 		return classType;
 	}

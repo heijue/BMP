@@ -4,13 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import com.alibaba.fastjson.JSON;
 import com.k2.mobile.app.R;
@@ -32,6 +29,9 @@ import com.k2.mobile.app.utils.LogUtil;
 import com.k2.mobile.app.utils.NetWorkUtil;
 import com.k2.mobile.app.utils.PublicResHeaderUtils;
 import com.k2.mobile.app.view.dynamicgrid.BaseDynamicGridAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CheeseDynamicAdapter extends BaseDynamicGridAdapter {
 	

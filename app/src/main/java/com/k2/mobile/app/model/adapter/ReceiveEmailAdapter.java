@@ -1,16 +1,16 @@
 package com.k2.mobile.app.model.adapter;    
 
-import java.util.List;
-
-import com.k2.mobile.app.R;
-import com.k2.mobile.app.model.bean.EmailBean;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.k2.mobile.app.R;
+import com.k2.mobile.app.model.bean.EmailBean;
+
+import java.util.List;
   
 /**
  * @Title ReceiveEmailAdapter.java

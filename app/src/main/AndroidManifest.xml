@@ -53,7 +53,7 @@
         android:hardwareAccelerated="true"
         android:name="com.k2.mobile.app.controller.core.BaseApp"
         android:allowBackup="true"
-        android:icon="@drawable/ic_shangdian"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:persistent="true"
         android:theme="@style/AppTheme" >
@@ -454,9 +454,9 @@
             android:name="com.igexin.getuiext.service.PayloadReceiver"
             android:exported="false" >
             <intent-filter>
+                <action android:name="com.igexin.sdk.action.RaMAwesRaX92lXcnnKaO97" />
                 <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
                 <action android:name="com.igexin.sdk.action.3WcSPOFXYX9Ak8J8OGwPu8" />
-                <action android:name="com.igexin.sdk.action.RaMAwesRaX92lXcnnKaO97" />
             </intent-filter>
         </receiver>
         <service

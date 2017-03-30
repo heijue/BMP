@@ -1,9 +1,4 @@
 package com.k2.mobile.app.view.widget;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import com.k2.mobile.app.R;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -18,6 +13,11 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
+
+import com.k2.mobile.app.R;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 public class XListView extends ListView implements OnScrollListener {
 	private float mLastY = -1; // save event y
 	private Scroller mScroller; // 用于回滚

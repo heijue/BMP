@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Global -->
-    <string name="app_name">KSTAR</string>
+    <string name="app_name">BPM</string>
     <string name="mobile_oa">KSTAR</string>
     <string name="mobile_oa_system">KSTAR System</string>
     <string name="global_activity_title_default">aBzB Time Clock</string>

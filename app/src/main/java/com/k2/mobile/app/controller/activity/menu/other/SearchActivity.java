@@ -1,7 +1,19 @@
 package com.k2.mobile.app.controller.activity.menu.other;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
 import com.k2.mobile.app.R;
@@ -28,20 +40,8 @@ import com.k2.mobile.app.utils.PublicResHeaderUtils;
 import com.k2.mobile.app.utils.StringUtil;
 import com.k2.mobile.app.view.widget.ClearEditText;
 
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.content.Intent;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Title: SearchActivity.java

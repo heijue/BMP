@@ -1,13 +1,18 @@
 package com.k2.mobile.app.controller.activity;
 
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.TreeMap;
-
+import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import com.alibaba.fastjson.JSON;
+import com.igexin.sdk.PushManager;
 import com.k2.mobile.app.R;
 import com.k2.mobile.app.common.config.BroadcastNotice;
 import com.k2.mobile.app.common.config.HttpConstants;
@@ -27,23 +32,11 @@ import com.k2.mobile.app.utils.EncryptUtil;
 import com.k2.mobile.app.utils.ErrorCodeContrast;
 import com.k2.mobile.app.utils.LogUtil;
 import com.k2.mobile.app.utils.PublicResHeaderUtils;
-
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.app.AlertDialog;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.res.Resources;
-import android.content.res.Configuration;
-import android.util.DisplayMetrics;
-
-import com.igexin.sdk.PushManager;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 
 /**
  * 
@@ -141,7 +134,6 @@ public class WelcomeActivity extends BaseActivity {
 	/**
 	 * @Title: getLoginInfo
 	 * @Description: 获取登陆信息
-	 * @param void
 	 * @return String 返回的数据 
 	 * @throws
 	 */
@@ -240,7 +232,6 @@ public class WelcomeActivity extends BaseActivity {
 					}
 					
 					mUpdate.checkUpdateInfo(bean.getDownloadUrl(), bean.getVersionCode(), val, bean.getFileSize());
-					
 					return;
 				}
 			} 
@@ -262,7 +253,6 @@ public class WelcomeActivity extends BaseActivity {
 	/**
 	 * @Title: createFilter
 	 * @Description: 创建IntentFilter
-	 * @param void
 	 * @return void 
 	 * @throws
 	 */

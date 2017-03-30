@@ -1,7 +1,17 @@
 package com.k2.mobile.app.controller.activity.menu.hr;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
 import com.k2.mobile.app.R;
@@ -25,18 +35,8 @@ import com.k2.mobile.app.utils.PublicResHeaderUtils;
 import com.k2.mobile.app.view.widget.XListView;
 import com.k2.mobile.app.view.widget.XListView.IXListViewListener;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
-import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
 * @Title BenefitLifeActivity.java

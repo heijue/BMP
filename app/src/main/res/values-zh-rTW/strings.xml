@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Global -->
-    <string name="app_name">KSTAR</string>
+    <string name="app_name">BPM</string>
     <string name="mobile_oa">K2移動辦公平臺</string>
     <string name="mobile_oa_system">移動辦公系統</string>
     <string name="global_login">登入</string>

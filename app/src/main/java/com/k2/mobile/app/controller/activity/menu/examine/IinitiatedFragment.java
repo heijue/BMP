@@ -1,31 +1,5 @@
 package com.k2.mobile.app.controller.activity.menu.examine;
  
-import java.util.ArrayList;
-import java.util.List;
-
-import com.alibaba.fastjson.JSON;
-import com.k2.mobile.app.R;
-import com.k2.mobile.app.common.config.BroadcastNotice;
-import com.k2.mobile.app.common.exception.HttpException;
-import com.k2.mobile.app.controller.activity.menu.hr.HRStaticLinkListActivity;
-import com.k2.mobile.app.controller.core.BaseApp;
-import com.k2.mobile.app.model.adapter.FlowAdapter;
-import com.k2.mobile.app.model.bean.FlowBean;
-import com.k2.mobile.app.model.bean.PublicRequestBean;
-import com.k2.mobile.app.model.bean.PublicResultBean;
-import com.k2.mobile.app.model.bean.ReqBodyBean;
-import com.k2.mobile.app.model.http.ResponseInfo;
-import com.k2.mobile.app.model.http.callback.RequestCallBack;
-import com.k2.mobile.app.model.http.other.SendRequest;
-import com.k2.mobile.app.utils.DialogUtil;
-import com.k2.mobile.app.utils.EncryptUtil;
-import com.k2.mobile.app.utils.ErrorCodeContrast;
-import com.k2.mobile.app.utils.LogUtil;
-import com.k2.mobile.app.utils.NetWorkUtil;
-import com.k2.mobile.app.utils.PublicResHeaderUtils;
-import com.k2.mobile.app.view.widget.XListView;
-import com.k2.mobile.app.view.widget.XListView.IXListViewListener;
-
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -48,6 +22,34 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
+import com.k2.mobile.app.BuildConfig;
+import com.k2.mobile.app.R;
+import com.k2.mobile.app.common.config.BroadcastNotice;
+import com.k2.mobile.app.common.exception.HttpException;
+import com.k2.mobile.app.controller.activity.menu.hr.HRStaticLinkListActivity;
+import com.k2.mobile.app.controller.core.BaseApp;
+import com.k2.mobile.app.model.adapter.FlowAdapter;
+import com.k2.mobile.app.model.bean.FlowBean;
+import com.k2.mobile.app.model.bean.PublicRequestBean;
+import com.k2.mobile.app.model.bean.PublicResultBean;
+import com.k2.mobile.app.model.bean.ReqBodyBean;
+import com.k2.mobile.app.model.http.ResponseInfo;
+import com.k2.mobile.app.model.http.callback.RequestCallBack;
+import com.k2.mobile.app.model.http.other.SendRequest;
+import com.k2.mobile.app.utils.DialogUtil;
+import com.k2.mobile.app.utils.EncryptUtil;
+import com.k2.mobile.app.utils.ErrorCodeContrast;
+import com.k2.mobile.app.utils.LogUtil;
+import com.k2.mobile.app.utils.NetWorkUtil;
+import com.k2.mobile.app.utils.PublicResHeaderUtils;
+import com.k2.mobile.app.view.widget.AddAndSubEditText;
+import com.k2.mobile.app.view.widget.XListView;
+import com.k2.mobile.app.view.widget.XListView.IXListViewListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
 * @Title IinitiatedFragment.java
 * @Package com.oppo.mo.controller.activity.menu.workbench;
@@ -60,11 +62,12 @@ import android.widget.TextView;
 */
 @SuppressLint("NewApi")
 public class IinitiatedFragment extends Fragment implements OnClickListener{
-	
-	private View view = null;
+
+	private static final String TAG = "IinitiatedFragment";
+	private View view            = null;
 	private TextView tv_fiction;
 	private TextView tv_review;
-	
+	private AddAndSubEditText mSearch;
 	private XListView lv_work_show;
 	// 页码
 	private int pageIndex = 1;
@@ -118,6 +121,7 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 						}
 						
 						fList.addAll(fbList);
+						if (BuildConfig.DEBUG)
 						fAdapter.notifyDataSetChanged();
 						
 						if(1 == operClass){
@@ -172,9 +176,7 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 		initListener();
 		initAdapter(1);
 		createFilter();
-		
 		requestServer();
-		
 		return view;
 	}
 	/*
@@ -186,7 +188,7 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 	private void initView(){
 		tv_fiction = (TextView) view.findViewById(R.id.tv_fiction);
 		tv_review = (TextView) view.findViewById(R.id.tv_review);
-		
+		mSearch = (AddAndSubEditText) view.findViewById(R.id.search);
 	    lv_work_show = (XListView) view.findViewById(R.id.lv_work_show);
 	    lv_work_show.setPullRefreshEnable(true);	// 设置下拉更新
 	    lv_work_show.setPullLoadEnable(false);		// 设置让它上拉更新 ljw 2016-01-16
@@ -224,12 +226,61 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 		tv_review.setOnClickListener(this);
 		lv_work_show.setXListViewListener(xListener);
 		lv_work_show.setOnItemClickListener(itemListener);
+		//搜索匹配
+		mSearch.setOnDrawableRightListener(new AddAndSubEditText.OnDrawableRightListener() {
+			@Override
+			public void onDrawableRightClick(View view) {
+				String searchString = mSearch.getText().toString().toLowerCase();
+				if (pageFlag == 1) {
+					if (searchString.equals("")) {
+						fList.clear();
+						fList.addAll(ficList);
+						fAdapter.notifyDataSetChanged();
+					} else {
+						fList.clear();
+						for (FlowBean flowBean : ficList) {
+							String activityName = flowBean.getActivityName();
+							String displayName = flowBean.getDisplayName();
+							String folio = flowBean.getFolio();
+							if (!activityName.isEmpty() && activityName.toLowerCase().contains(searchString)) {
+								fList.add(flowBean);
+							} else if (!displayName.isEmpty()&&displayName.toLowerCase().contains(searchString)) {
+								fList.add(flowBean);
+							} else if (!folio.isEmpty()&&folio.toLowerCase().contains(searchString)) {
+								fList.add(flowBean);
+							}
+						}
+						fAdapter.notifyDataSetChanged();
+					}
+				} else if (pageFlag == 2) {
+					if (searchString.equals("")) {
+						fList.clear();
+						fList.addAll(apiList);
+						fAdapter.notifyDataSetChanged();
+					} else {
+						fList.clear();
+						for (FlowBean flowBean : apiList) {
+							String activityName = flowBean.getActivityName();
+							String displayName = flowBean.getDisplayName();
+							String folio = flowBean.getFolio();
+							if (!activityName.isEmpty() && activityName.toLowerCase().contains(searchString)) {
+								fList.add(flowBean);
+							} else if (!displayName.isEmpty()&&displayName.toLowerCase().contains(searchString)) {
+								fList.add(flowBean);
+							} else if (!folio.isEmpty()&&folio.toLowerCase().contains(searchString)) {
+								fList.add(flowBean);
+							}
+						}
+						fAdapter.notifyDataSetChanged();
+					}
+				}
+			}
+		});
 	}
 	
 	/**
 	 * @Title: createFilter
 	 * @Description: 创建IntentFilter
-	 * @param void
 	 * @return void 
 	 * @throws
 	 */
@@ -259,7 +310,6 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 	/**
 	 * @Title: getLoginInfo
 	 * @Description: 获取登陆信息
-	 * @param void
 	 * @return String 返回的数据 
 	 * @throws
 	 */
@@ -278,7 +328,6 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 	/**
 	 * @Title: doubleClickRefresh
 	 * @Description: 双击刷新
-	 * @param void
 	 * @return void 
 	 * @throws
 	 */
@@ -389,7 +438,6 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 	/**
 	* @Title: onLoad
 	* @Description: 停止加载进度条
-	* @param void
 	* @return String 返回的数据 
 	* @throws
 	*/
@@ -402,7 +450,6 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 	/**
 	* @Title: requestServer
 	* @Description: 发送请求报文
-	* @param void
 	* @return void
 	* @throws
 	*/
@@ -518,7 +565,7 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 			getActivity().unregisterReceiver(iReceiver);
 		super.onDestroy();
 	}
-
+	private int pageFlag = 1;
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
@@ -526,9 +573,11 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 				switchBg(1);
 				operClass = 1;
 				pageIndex = 1;
+				pageFlag = 1;
 				lv_work_show.setTips(tipsQuasi);
 				flag  = 1;
 				fList.clear();
+				mSearch.setText("");
 				fList.addAll(ficList);
 				initAdapter(1);
 				break;
@@ -536,8 +585,10 @@ public class IinitiatedFragment extends Fragment implements OnClickListener{
 				switchBg(2);
 				operClass = 2;
 				pageIndex = 1;
+				pageFlag = 2;
+				mSearch.setText("");
 				lv_work_show.setTips(tipsAudit);
-				flag  = 1;
+				flag  = 2;
 				if(1 > apiCount){
 					apiCount++;
 //					requestServer();

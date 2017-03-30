@@ -21,7 +21,7 @@ public class PublicResHeaderUtils {
 		hBean.setSign("");
 		hBean.setDeviceType("2");
 		hBean.setClientIP(BaseApp.clientid);
-		hBean.setOperatingSystemType("2");
+		hBean.setOperatingSystemType("1");
 		hBean.setOperatingSystemVer("1.0");
 		hBean.setMask(BaseApp.mask);
 

@@ -1,11 +1,6 @@
 package com.k2.mobile.app.model.other;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.util.Log;
 
 import com.k2.mobile.app.model.bean.ActionsBean;
 import com.k2.mobile.app.model.bean.BaseInfoBean;
@@ -24,7 +19,12 @@ import com.k2.mobile.app.model.bean.TaskItemBean;
 import com.k2.mobile.app.model.bean.TaskListBean;
 import com.k2.mobile.app.model.bean.TaskListItem;
 
-import android.util.Log;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 /**
  * Get Service Data
  * 
@@ -116,9 +116,7 @@ public class ReceiveResponse {
 
 						tlBean.setExtendInfoBean(eBean);
 					}
-
 					tlBeanList.add(tlBean);
-
 				}
 			}
 		} catch (JSONException e) {
